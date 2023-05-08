@@ -32,3 +32,5 @@ coverage.lcov
 coverage/
 packages/stream_feed_flutter/example/.flutter-plugins-dependencies
 packages/stream_feed_flutter/example/.flutter-plugins-dependencies
+
+pubspec_overrides.yaml
