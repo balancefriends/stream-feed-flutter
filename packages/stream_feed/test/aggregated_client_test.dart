@@ -40,7 +40,7 @@ void main() {
           .thenAnswer((_) async => Response(
               data: {'results': rawActivities},
               requestOptions: RequestOptions(
-                path: '',
+                
               ),
               statusCode: 200));
       final activities = await client.getEnrichedActivityDetail<String, String,
@@ -77,7 +77,7 @@ void main() {
           .thenAnswer((_) async => Response(
               data: {'results': rawActivities},
               requestOptions: RequestOptions(
-                path: '',
+                
               ),
               statusCode: 200));
       final activities = await client.getActivityDetail(activityId);
@@ -109,7 +109,7 @@ void main() {
           .thenAnswer((_) async => Response(
               data: {'results': rawActivities},
               requestOptions: RequestOptions(
-                path: '',
+                
               ),
               statusCode: 200));
       final activities = await client.getActivities(
@@ -145,7 +145,7 @@ void main() {
           .thenAnswer((_) async => Response(
               data: {'results': rawActivities},
               requestOptions: RequestOptions(
-                path: '',
+                
               ),
               statusCode: 200));
       final activities =

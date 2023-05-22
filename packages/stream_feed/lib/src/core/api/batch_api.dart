@@ -63,7 +63,7 @@ class BatchAPI {
       queryParameters: {'ids': ids.join(',')},
     );
     final data = (result.data!['results'] as List)
-        .map((e) => Activity.fromJson(e))
+        .map((it) => Activity.fromJson(it as Map<String, dynamic>))
         .toList(growable: false);
     return data;
   }
@@ -82,7 +82,7 @@ class BatchAPI {
       },
     );
     final data = (result.data['results'] as List)
-        .map((e) => Activity.fromJson(e))
+        .map((it) => Activity.fromJson(it as Map<String, dynamic>))
         .toList(growable: false);
     return data;
   }
@@ -98,7 +98,8 @@ class BatchAPI {
       queryParameters: {'ids': ids.join(',')},
     );
     final data = (result.data['results'] as List)
-        .map((e) => GenericEnrichedActivity<A, Ob, T, Or>.fromJson(e))
+        .map((it) => GenericEnrichedActivity<A, Ob, T, Or>.fromJson(
+            it as Map<String, dynamic>))
         .toList(growable: false);
     return data;
   }
@@ -120,7 +121,8 @@ class BatchAPI {
       },
     );
     final data = (result.data['results'] as List)
-        .map((e) => GenericEnrichedActivity<A, Ob, T, Or>.fromJson(e))
+        .map((it) => GenericEnrichedActivity<A, Ob, T, Or>.fromJson(
+            it as Map<String, dynamic>))
         .toList(growable: false);
     return data;
   }

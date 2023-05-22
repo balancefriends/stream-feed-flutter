@@ -33,7 +33,7 @@ class FeedAPI {
       data: {'activities': activities},
     );
     final data = (result.data!['activities'] as List)
-        .map((e) => Activity.fromJson(e))
+        .map((it) => Activity.fromJson(it as Map<String, dynamic>))
         .toList(growable: false);
     return data;
   }
@@ -169,7 +169,7 @@ class FeedAPI {
       },
     );
     final data = (result.data!['results'] as List)
-        .map((e) => Follow.fromJson(e))
+        .map((it) => Follow.fromJson(it as Map<String, dynamic>))
         .toList(growable: false);
     return data;
   }
@@ -196,7 +196,7 @@ class FeedAPI {
       },
     );
     final data = (result.data['results'] as List)
-        .map((e) => Follow.fromJson(e))
+        .map((it) => Follow.fromJson(it as Map<String, dynamic>))
         .toList(growable: false);
     return data;
   }
@@ -254,7 +254,7 @@ class FeedAPI {
       data: {'changes': updates},
     );
     final data = (result.data!['activities'] as List)
-        .map((e) => Activity.fromJson(e))
+        .map((it) => Activity.fromJson(it as Map<String, dynamic>))
         .toList(growable: false);
     return data;
   }
@@ -279,7 +279,7 @@ class FeedAPI {
       data: {'changes': updates},
     );
     final data = (result.data!['activities'] as List)
-        .map((e) => Activity.fromJson(e))
+        .map((it) => Activity.fromJson(it as Map<String, dynamic>))
         .toList(growable: false);
     return data;
   }

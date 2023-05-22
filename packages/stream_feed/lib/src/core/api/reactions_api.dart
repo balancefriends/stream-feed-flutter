@@ -80,7 +80,7 @@ class ReactionsAPI {
       queryParameters: options,
     );
     final data = (result.data!['results'] as List)
-        .map((e) => Reaction.fromJson(e))
+        .map((it) => Reaction.fromJson(it as Map<String, dynamic>))
         .toList(growable: false);
     return data;
   }

@@ -4,7 +4,8 @@ import 'package:equatable/equatable.dart';
 class FeedId extends Equatable {
   /// Builds a [FeedId]
   FeedId(this.slug, this.userId)
-      : assert(!slug.contains(':'), 'Invalid slug'), //TODO:
+      : assert(!slug.contains(':'), 'Invalid slug'),
+        //TODO:
         // validate feed slug stream-python style using regex
         assert(!userId.contains(':'), 'Invalid userId');
 
@@ -30,7 +31,7 @@ class FeedId extends Equatable {
   /// Takes a list of feed ids of type `List<String>`
   /// and returns a list of feed ids of type `List<FeedId>`
   static List<FeedId>? fromIds(List? ids) =>
-      ids?.map((e) => FeedId.id(e)).toList(growable: false);
+      ids?.map((it) => FeedId.id(it)).toList(growable: false);
 
   /// Takes a list of feed ids of type `List<FeedId>`
   /// and returns a list of feed ids as `List<String>`

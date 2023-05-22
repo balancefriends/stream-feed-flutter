@@ -69,7 +69,7 @@ void main() {
           .thenAnswer((_) async => Response(
               data: {'results': rawActivities},
               requestOptions: RequestOptions(
-                path: '',
+                
               ),
               statusCode: 200));
       final activities = await client.getEnrichedActivityDetail<String, String,
@@ -78,8 +78,8 @@ void main() {
       expect(
           activities,
           rawActivities
-              .map((e) => GenericEnrichedActivity<String, String, String,
-                  String>.fromJson(e))
+              .map(GenericEnrichedActivity<String, String, String,
+                  String>.fromJson)
               .toList(growable: false)
               .first);
       verify(() => api.getEnrichedActivities(token, feedId, options)).called(1);
@@ -102,7 +102,7 @@ void main() {
           .thenAnswer((_) async => Response(
               data: {'results': rawActivities},
               requestOptions: RequestOptions(
-                path: '',
+                
               ),
               statusCode: 200));
       final activities = await client.getActivityDetail(activityId);
@@ -110,7 +110,7 @@ void main() {
       expect(
           activities,
           rawActivities
-              .map((e) => Activity.fromJson(e))
+              .map(Activity.fromJson)
               .toList(growable: false)
               .first);
       verify(() => api.getActivities(token, feedId, options)).called(1);
@@ -171,7 +171,7 @@ void main() {
           .thenAnswer((_) async => Response(
               data: {'results': rawActivities},
               requestOptions: RequestOptions(
-                path: '',
+                
               ),
               statusCode: 200));
       final activities = await client.getActivities(
@@ -180,7 +180,7 @@ void main() {
       expect(
           activities,
           rawActivities
-              .map((e) => Activity.fromJson(e))
+              .map(Activity.fromJson)
               .toList(growable: false));
       verify(() => api.getActivities(token, feedId, options)).called(1);
     });
@@ -207,7 +207,7 @@ void main() {
           .thenAnswer((_) async => Response(
               data: {'results': rawActivities},
               requestOptions: RequestOptions(
-                path: '',
+                
               ),
               statusCode: 200));
       final activities =
@@ -222,8 +222,8 @@ void main() {
       expect(
           activities,
           rawActivities
-              .map((e) => GenericEnrichedActivity<String, String, String,
-                  String>.fromJson(e))
+              .map(GenericEnrichedActivity<String, String, String,
+                  String>.fromJson)
               .toList(growable: false));
       verify(() => api.getEnrichedActivities(token, feedId, options)).called(1);
     });

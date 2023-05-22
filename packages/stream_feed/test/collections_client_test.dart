@@ -43,7 +43,7 @@ void main() {
           .thenAnswer((_) async => Response(
               data: {},
               requestOptions: RequestOptions(
-                path: '',
+                
               ),
               statusCode: 200));
       await client.delete(collection, entryId);
@@ -101,7 +101,7 @@ void main() {
           .thenAnswer((_) async => Response<Map>(
               data: {}, //TODO: flaky
               requestOptions: RequestOptions(
-                path: '',
+                
               ),
               statusCode: 200));
       await clientWithSecret.deleteMany(collection, entryIds);

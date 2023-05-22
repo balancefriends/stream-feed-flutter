@@ -12,7 +12,7 @@ void main() {
     final dummyResponse = Response(
       data: {},
       requestOptions: RequestOptions(
-        path: '',
+        
       ),
       statusCode: 200,
     );

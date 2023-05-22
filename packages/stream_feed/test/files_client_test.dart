@@ -41,7 +41,7 @@ void main() {
       when(() => api.delete(token, targetUrl)).thenAnswer((_) async => Response(
           data: {},
           requestOptions: RequestOptions(
-            path: '',
+            
           ),
           statusCode: 200));
       await client.delete(targetUrl);
